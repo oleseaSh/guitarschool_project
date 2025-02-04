@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Alice Guitar School!</title>
@@ -20,6 +21,7 @@
             color: #0D0D0D;
             background-color: #F2E85E;
         }
+
         nav {
             height: 30px;
             width: 1000px;
@@ -28,12 +30,14 @@
             padding-top: 10px;
             justify-content: space-between;
         }
+
         #leftmenu {
             color: #fff;
             float: left;
             width: 30%;
             margin-bottom: 20px;
         }
+
         .searchbox {
             background-color: #F2E85E;
             padding: 5px;
@@ -47,6 +51,7 @@
             width: 70%;
             margin-bottom: 10px;
         }
+
         footer {
             clear: both;
             width: 100%;
@@ -76,7 +81,6 @@
             text-decoration: none;
             color: #F2E85E;
         }
-
     </style>
 </head>
 
@@ -87,40 +91,56 @@
         </nav>
     </header>
 
-        <div style="width: 1000px; margin-left: auto; margin-right: auto;">
-            <aside id="leftmenu">
+    <div style="width: 1000px; margin-left: auto; margin-right: auto;">
+        <aside id="leftmenu">
+            <header>
+                <img src="./images/G.png" alt="giutar school logo" style="width: 240px; padding: 15px;">
+                <h4 style="padding: 5px; margin: 10px;">Найди свой гитарный курс</h4>
+            </header>
+            <input type="search" class="searchbox" placeholder="search our courses">
+
+            <ul>
+                <li><a href="articleoverview.html">Статьи</a></li>
+                <li><a href="Мажорная гамма.html">Мажорная гамма</a></li>
+                <li><a href="Мажорная гамма на гитаре.html">Мажорная гамма на гитаре</a></li>
+                <li><a href="Отработка гаммы на гитаре.html">Отработка гаммы на гитаре</a></li>
+                <li><a href="index.html">На главную</a></li>
+
+            </ul>
+        </aside>
+        <main id="main">
+            <article>
                 <header>
-                    <img src="./images/G.png" alt="giutar school logo" style="width: 240px; padding: 15px;">  
-                    <h4 style="padding: 5px; margin: 10px;">Найди свой гитарный курс</h4>
+                    <h1 style="font-size: 40px;color: #F2E85E;">Добро пожаловать в Guitar School!</h1>
                 </header>
-                <input type="search" class="searchbox" placeholder="search our courses">
-            </aside>
-            <main id="main">
-                <article>
-                    <header>
-                        <h1 style="font-size: 40px;color: #F2E85E;">Добро пожаловать в Guitar School!</h1>
-                    </header>
-                    <img src="./images/guitargirl.jpg" alt="girl playing guitar" width="400">
-                    <h2 style="color: #F2E85E;">О нас</h2>
-                    <p>
-                        Добро пожаловать в нашу уютную <i>онлайн-гитарную школу</i>! Мы учим с нуля детей и взрослых, создавая атмосферу, словно вы дома. У нас вы найдёте разнообразные курсы — от основ теории музыки до практических занятий. Начните своё музыкальное путешествие уже сегодня! <br>
-                        Много лет мы стремились создать такую <i>гитарную школу</i>, которая была бы действительно удобной и доступной для каждого. <i>Мы хотели, чтобы учиться могли все</i> — независимо от возраста, уровня подготовки или места проживания. Так появилась наша онлайн-гитарная школа, где дети и взрослые могут осваивать игру на гитаре легко, комфортно и в своём темпе. 
-                    </p>
-                    <p>
-                        Мы объединили тёплую, домашнюю атмосферу с профессиональным подходом, предлагая разнообразные курсы — от теории до практики.
-                    </p>
-                </article>
-                <section>
-                    <h4 style="color: #F2E85E;">Практический курс гитары за 8 занятий.</h4>
-                    20% СКИДКА ЗА КУРС <br>
-                    <img src="/images/guil.jpg" alt="Новогоднее предложение" width="500" height="300">
-                </section>
-            </main>
-        </div>
-        <footer>
-            <small> &copy; 2024  Alice's Guitar School - All rights reserved</small>
-            <p><small><a style="color: #0D0D0D;" href="https://www.webcrew.com">Created by WebCrew.com</a></small></p>
-        </footer>
-    
+                <img src="./images/guitargirl.jpg" alt="girl playing guitar" width="400">
+                <h2 style="color: #F2E85E;">О нас</h2>
+                <p>
+                    Добро пожаловать в нашу уютную <i>онлайн-гитарную школу</i>! Мы учим с нуля детей и взрослых,
+                    создавая атмосферу, словно вы дома. У нас вы найдёте разнообразные курсы — от основ теории музыки до
+                    практических занятий. Начните своё музыкальное путешествие уже сегодня! <br>
+                    Много лет мы стремились создать такую <i>гитарную школу</i>, которая была бы действительно удобной и
+                    доступной для каждого. <i>Мы хотели, чтобы учиться могли все</i> — независимо от возраста, уровня
+                    подготовки или места проживания. Так появилась наша онлайн-гитарная школа, где дети и взрослые могут
+                    осваивать игру на гитаре легко, комфортно и в своём темпе.
+                </p>
+                <p>
+                    Мы объединили тёплую, домашнюю атмосферу с профессиональным подходом, предлагая разнообразные курсы
+                    — от теории до практики.
+                </p>
+            </article>
+            <section>
+                <h4 style="color: #F2E85E;">Практический курс гитары за 8 занятий.</h4>
+                20% СКИДКА ЗА КУРС <br>
+                <img src="/images/guil.jpg" alt="Новогоднее предложение" width="500" height="300">
+            </section>
+        </main>
+    </div>
+    <footer>
+        <small> &copy; 2024 Alice's Guitar School - All rights reserved</small>
+        <p><small><a style="color: #0D0D0D;" href="https://www.webcrew.com">Created by WebCrew.com</a></small></p>
+    </footer>
+
 </body>
+
 </html>
