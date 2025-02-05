@@ -8,106 +8,7 @@
     <meta name="content" content="Online Guitar Lessons">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/images/GS.svg">
-    <style>
-        body {
-            margin-top: 0px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #0D0D0D;
-        }
-
-        #mainheader {
-            color: #0D0D0D;
-            background-color: #F2E85E;
-        }
-
-        nav {
-            height: 30px;
-            width: 1000px;
-            color: #0D0D0D;
-            display: flex;
-            padding-top: 10px;
-            justify-content: space-between;
-        }
-
-        #leftmenu {
-            color: #fff;
-            float: left;
-            width: 30%;
-            margin-bottom: 20px;
-        }
-
-        .searchbox {
-            background-color: #F2E85E;
-            padding: 5px;
-            margin: 10px 10px;
-            width: 200px;
-        }
-
-        #main {
-            color: #fff;
-            float: right;
-            width: 70%;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            clear: both;
-            width: 100%;
-            text-align: center;
-            background-color: #F2E85E;
-            color: #0D0D0D;
-            bottom: 0;
-            padding: 10px;
-
-        }
-
-        header,
-        section,
-        footer,
-        aside,
-        main,
-        article,
-        figure {
-            display: block;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            color: #0D0D0D;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #F2E85E;
-        }
-
-        tr:nth-child(even) {
-            background-color: #FAF2C0;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #FFF9DA;
-        }
-
-        h2 {
-            color: #F2E85E;
-        }
-
-        a {
-            text-decoration: none;
-            color: #F2E85E;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -117,10 +18,10 @@
         </nav>
     </header>
 
-    <div style="width: 1000px; margin-left: auto; margin-right: auto;">
+    <div class="content-container">
         <aside id="leftmenu">
             <header>
-                <img src="./images/articles/artmin4.jpg" alt="">
+                <img src="./images/articles/artmax4.jpg" alt="" width="200">
                 <h4 style="padding: 5px; margin: 10px;">Найди свой гитарный курс</h4>
                 <input type="search" class="searchbox" placeholder="search our courses">
                 <ul>
@@ -131,23 +32,13 @@
                     <li><a href="index.html">На главную</a></li>
     
                 </ul>
-
-
-                <h4>Популярные курсы:</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="#">Базовый курс игры на гитаре</a></li>
-                    <li><a href="#">Баррэ без боли</a></li>
-                    <li><a href="#">Импровизация и соло</a></li>
-                    <li><a href="#">Фингерстайл для начинающих</a></li>
-                </ul>
         </aside>
 
         <main id="main">
             <article>
                 <header>
-                    <h1 style="font-size: 40px;color: #F2E85E;">Мажорная гамма.</h1>
+                    <h1>Мажорная гамма.</h1>
                 </header>
-                <!-- <img src="./images/scale.webp" alt="playing guitar" width="400"> -->
                 <img src="./images/Gamma-Do-mazhor-1-pozitsiya.png.webp" alt="C maj scale" width="400">
 
                 <h2>Мажорная гамма: Основная информация</h2>
