@@ -3,394 +3,464 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Онлайн-гитарная школа</title>
-    <meta name="description"
-        content="Онлайн-гитарная школа для детей и взрослых. Учитесь играть на гитаре с нуля в удобное время и в любом месте!">
-    <link rel="stylesheet" href="stylesboots.css"> <!-- Подключение CSS-файла -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Masters - Онлайн школа игры на гитаре</title>
+    <meta name="description" content="Профессиональное обучение игре на гитаре для всех уровней. Первый урок бесплатно!">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #764ba2;
+            --secondary: #4ecdc4;
+            --dark: #292f36;
+            --light: #f7fff7;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 56px;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: white !important;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--dark) !important;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #19191a 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .course-card .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-left: 4px solid var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--primary);
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Шапка сайта -->
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="./images/logo1.png" alt="" width="30" height="30" class="d-inline-block align-top">
-                    Guitar Shool </a>
-                <!-- Кнопка "бургер" для мобильных устройств -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo.png" alt="" width="30" height="30" class="d-inline-block align-top">
+                Guitar Masters</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Курсы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О школе</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#signup" class="btn btn-warning ms-3">Начать обучение</a>
+            </div>
+        </div>
+    </nav>
 
-                <!-- Основное меню -->
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./lessonlayout.html">Курсы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="userNameInput.html">Заказать</a>
-                        </li>
-                    </ul>
-                    <span class="navbar-text mx-2">Learn something today!</span>
-                    <form>
-                        <div class="m-1">
-                            <div class="input-group">
-                                <input type="text" class="form-control form-control-sm" id="email" placeholder="Поиск">
-                                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                    </svg></span>
+    <!-- Герой секция -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Научись играть на гитаре за 3 месяца</h1>
+                    <p class="lead mb-4">Персональное онлайн-обучение с профессиональными преподавателями. Первый урок - бесплатно!</p>
+                    <div class="d-flex gap-3">
+                        <a href="#signup" class="btn btn-warning btn-lg">Записаться</a>
+                        <a href="#courses" class="btn btn-outline-light btn-lg">Курсы</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="./images/banner.jpg" style="height: 360px; width: 520px; object-fit: cover;" alt="Гитарист" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="card-body">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px;">
+                                <i class="fas fa-user-tie fs-3"></i>
+                            </div>
+                            <h5>Опыт преподавания</h5>
+                            <p class="text-muted">Преподаватели с музыкальным образованием и сценическим опытом</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="card-body">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px;">
+                                <i class="fas fa-laptop fs-3"></i>
+                            </div>
+                            <h5>Онлайн-формат</h5>
+                            <p class="text-muted">Занимайтесь из любой точки мира в удобное время</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <div class="card-body">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px;">
+                                <i class="fas fa-music fs-3"></i>
+                            </div>
+                            <h5>Персональная программа</h5>
+                            <p class="text-muted">Индивидуальный подход к каждому ученику</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Курсы -->
+    <section id="courses" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Наши курсы</h2>
+                <p class="lead text-muted">Выберите подходящую программу обучения</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <span class="badge bg-success">Популярный</span>
+                        <img src="./images/course1.jpg" style="height: 240px; width: 100%; object-fit: cover;" class="card-img-top" alt="Базовый курс">
+                        <div class="card-body">
+                            <h5 class="card-title">Базовый курс</h5>
+                            <p class="card-text text-muted">Для начинающих с нуля. Постановка рук, аккорды, ритмика, разбор песен, минимум теории.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i> 8 уроков</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Практика</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Занятия онлайн</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 mb-0">1 400 лей/мес</span>
+                                <a href="#" class="btn btn-primary">Подробнее</a>
                             </div>
                         </div>
-                    </form>
-
-                </div>
-            </div>
-        </nav>
-
-        <!-- <nav class="navbar  navbar-expand-lg">
-            <div class="container">
-                <a class="nav-brand" href="#">
-                    <img src="./b_img/logo_2.jpg" width="150 px" alt="logo">
-                </a>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse">
-                    <div class="nav navbar-light bg-light">
-                        <a class="nav-link" href="#">Home</a>
-                        <a class="nav-link" href="#">Docs</a>
-                        <a class="nav-link" href="#">Support</a>
-                        <a class="nav-link" href="#">Blog</a>
                     </div>
-                    <span class="navbar-text">Learn something today!</span>
-                    <form action=""></form>
-
-
                 </div>
-
-            </div>
-
-
-            </div>
-        </nav> -->
-
-
-
-    </header>
-
-    <!-- Основной контент -->
-    <main class="container" role="main">
-        <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-bs-target="#welcomeCarousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#welcomeCarousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#welcomeCarousel" data-bs-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active welcome-carousel-image1">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Гитарная школа Онлайн</h1>
-                            <p>Учись
-                                и совершенствуй свои навыки с нами!</p>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <img src="./images/course3.jpg" style="height: 240px; width: 100%; object-fit: cover;" class="card-img-top" alt="Базовый курс">
+                        <div class="card-body">
+                            <h5 class="card-title">Базовый курс + теория</h5>
+                            <p class="card-text text-muted">Более интенсивный курс. Постановка рук, аккорды, ритмика, разбор песен, музыкальных композиций и дополнительно изучение теории.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i> 12 уроков</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Практика + теория</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Занятия онлайн</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 mb-0">2 200/мес</span>
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item welcome-carousel-image2">
-                    <div class="container">
-                        <div class="carousel-caption text-left">
-                            <h1>Начни играть уже сегодня!</h1>
-                            <p>Исполни свою мечту.</p>
-                            <p><a class="btn btn-lg btn-primary btn-sm" href="order.html" role="button">Записаться на
-                                    курс</a></p>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100">
+                        <span class="badge bg-warning text-dark">Новый</span>
+                        <img src="./images/course2.jpg" style="height: 240px; width: 100%; object-fit: cover;" class="card-img-top" alt="Базовый курс">
+                        <div class="card-body">
+                            <h5 class="card-title">Детский курс (7-14 лет)</h5>
+                            <p class="card-text text-muted">Специальная программа для детей с индивидуальным подходом к ребенку. Разбор мелодий и песен, постановка руки, минимум теории.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-primary me-2"></i> 8 уроков</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Индивидуальный подход</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Занятия онлайн</li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel-item welcome-carousel-image3">
-                    <div class="container">
-                        <div class="carousel-caption text-right">
-                            <h1>Учись в удобное время и в своем темпе.</h1>
-                            <p> Выучи свои любмые песни с нами!</p>
-                            <p><a class="btn btn-lg btn-primary" href="fruitpies.html" role="button">Узнать больше</a>
-                            </p>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 mb-0">1 200 лей/мес</span>
+                                <a href="#" class="btn btn-primary">Подробнее</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#welcomeCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#welcomeCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
+            
+            <div class="text-center mt-5">
+                <a href="#courses" class="btn btn-outline-primary btn-lg">Все курсы</a>
+            </div>
         </div>
+    </section>
 
-        <!-- jumbitron -->
-        <!-- <div class="row bg-light p-2 rounded">
-            <h3 class="m-5 display-4">Гитарная школа Онлайн <br>для детей и взрослых. <br><small class="lead">
-                    Учитесь с нуля
-                    или совершенствуйте навыки в уютной атмосфере, как дома.
-                </small></h3>
-
-        </div> -->
-
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Левая колонка (боковое меню) -->
-                <div class="col-lg-3 col-md-3">
-                    <ol class="list-group mt-4">
-
-                        <li class="list-group-item list-group-item-dark">
-                            <h3 class="lead"><strong>Наши курсы</strong></h3>
-                        </li>
-                        <li class=" lead list-group-item list-group-item-light">Основы игры на гитаре</li>
-                        <li class=" lead list-group-item list-group-item-light">Теория музыки</li>
-                        <li class=" lead list-group-item list-group-item-light">Импровизация и соло</li>
-                            <!-- <span class="badge bg-secondary">New...</span> -->
-                        
-                    </ol>
-                      <!-- Карточка 3 -->
-                      <div class="card mt-3 cards-custom">
-                        <img src="./images/articles/card-2.jpg" class="card-img-top" alt="Онлайн обучение">
-                        <div class="card-body">
-                            <h5 class="card-title">Почему учиться онлайн удобно</h5>
-                            <p class="card-text">Преимущества онлайн-обучения игре на гитаре.</p>
-                            <a href="card3.html" class="btn btn-primary btn-sm">Читать</a>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Карточка 4 -->
-                    <div class="card mt-3 cards-custom">
-                        <img src="./images/articles/artmax7.jpg" class="card-img-top" alt="Разбор песен">
-                        <div class="card-body">
-                            <h5 class="card-title">Разбор любимых песен</h5>
-                            <p class="card-text">Учитесь играть свои любимые песни.</p>
-                            <a href="card4.html" class="btn btn-primary btn-sm">Читать</a>
-                        </div>
-                    </div>
+    <!-- О школе -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="О школе" class="img-fluid rounded-3 shadow">
                 </div>
-
-                <!-- Центральная колонка (основное содержимое) -->
-                <div class="col-lg-6 col-md-6">
-                    <h3 class="display-6 m-3 text-center">Добро пожаловать в Гитарную Школу</h3>
-                    <p class="font-left font-weight-lighter ms-3 my-5 text-center">
-                        Мы создали пространство, где каждый — независимо от возраста, уровня подготовки или места
-                        проживания — может научиться играть на гитаре. Наши курсы подходят как для начинающих, так и для
-                        тех, кто хочет улучшить свои навыки.
-                    </p>
-                    <img src="./b_img/b_main.jpg" alt="guitar" style="width: 500px;"
-                        class="img-fluid rounded ms-3 align-img-center">
-                    <ul>
-                        <li>Обучение с нуля</li>
-                        <li>Теория и практика в одном курсе</li>
-                        <li>Уютная атмосфера, как дома</li>
-                        <li>Гибкий график занятий</li>
-                    </ul>
-                    <a type="button" href="carusel.html" class="btn btn-dark float-right">Записаться на курс</a>
-                </div>
-
-                <!-- Правая колонка (боковое меню) -->
-                <div class="col-lg-3 col-md-3 cards-custom">
-                    <!-- Заголовок блока -->
-                    <div class="card mt-3">
-                        <div class="card-header list-group-item-dark">
-                            <h3 class="lead mb-0"><strong>Статьи</strong></h3>
-                        </div>
-                    </div>
-
-                    <!-- Карточка 1 -->
-                    <div class="card mt-3">
-                        <img src="./images/articles/artmax5.jpg" class="card-img-top" alt="Как выбрать гитару">
-                        <div class="card-body">
-                            <h5 class="card-title">Как правильно выбрать гитару</h5>
-                            <p class="card-text">Советы по выбору гитары для начинающих.</p>
-                            <a href="card1.html" class="btn btn-primary btn-sm">Читать</a>
-                        </div>
-                    </div>
-
-                    <!-- Карточка 2 -->
-                    <div class="card mt-3">
-                        <img src="./images/articles/banner_3.jpg" class="card-img-top" alt="10 причин">
-                        <div class="card-body">
-                            <h5 class="card-title">10 причин научиться играть на гитаре</h5>
-                            <p class="card-text">Почему гитара — это круто!</p>
-                            <a href="card2.html" class="btn btn-primary btn-sm">Читать</a>
-                        </div>
-                    </div>
-
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Guitar Masters - онлайн-школа гитары</h2>
+                    <p class="lead mb-4">Мы объединяем любовь к музыке и удобство, традиции классического музыкального образования с современными онлайн-технологиями.</p>
                     
-                </div>
-            </div>
-        </div>
-        </div>
-
-
-
-        <div class="row bg-light">
-            <h6 class="display-6">Научитесь играть на гитаре с комфортом</h6>
-            <p class="lead">в любое время и в любом месте!</p>
-        </div>
-
-        <div class="row">
-            <!-- Преимущества -->
-            <ol class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <h4 class="display-6">Почему выбирают нас?</h4>
-                </li>
-                <li class="list-group-item">
-                    <h5 class="lead">Профессиональные преподаватели</h5><small>Опытные педагоги с многолетним
-                        стажем.</small>
-                </li>
-                <li class="list-group-item">
-                    <h5 class="lead">Индивидуальный подход</h5><small>Программа подстраивается под ваши
-                        цели.</small>
-                </li>
-                <li class="list-group-item">
-                    <h5 class="lead">Гибкий график</h5><small>Учитесь в удобное для вас время.</small>
-                </li>
-                <li class="list-group-item">
-                    <h5 class="lead">Поддержка 24/7</h5><small>Всегда готовы ответить на ваши вопросы.</small>
-                </li>
-            </ol>
-        </div>
-
-
-        <div class="row">
-            <!-- Отзывы -->
-            <div class="bg-light p-2 rounded">
-
-                <h2 class="display-6">Что говорят наши ученики:</h2>
-
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-header"><b>— Анна, 35 лет</b></div>
-                        <div class="card-body">
-                            <p class="text-end"><em>«Я никогда не думал, что смогу играть на гитаре, но
-                                    благодаря
-                                    этой
-                                    школе я уже
-                                    исполняю
-                                    свои любимые песни!»</em></p>
-                            <a href="#" class="card-link link-danger">Записаться на курс</a>
+                    <div class="d-flex mb-3">
+                        <div class="me-4">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 d-inline-block">
+                                <i class="fas fa-users fs-4"></i>
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-header"><b>— Иван, 28 лет</b></div>
-                        <div class="card-body">
-                            <p class="text-end"> <em>«Очень удобно заниматься дома, особенно когда есть
-                                    поддержка
-                                    преподавателей.»</em></p>
-                            <a href="#" class="card-link link-danger">Записаться на курс</a>
+                        <div>
+                            <h5>Ученики разного возраста</h5>
+                            <p class="text-muted mb-0">научились играть на гитаре с нашей помощью.</p>
                         </div>
-
                     </div>
-                    <div class="card">
-                        <div class="card-header"><b>— Ольга, мама ученика</b></div>
-                        <div class="card-body">
-                            <p class="text-end"><em>«Мой ребёнок в восторге от уроков! Спасибо за терпение и
-                                    профессионализм.»</em></p>
-                            <a href="#" class="card-link link-danger">Записаться на курс</a>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-4">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 d-inline-block">
+                                <i class="fas fa-award fs-4"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>5 лет опыта</h5>
+                            <p class="text-muted mb-0">В сфере гитарного обучения.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 d-inline-block">
+                                <i class="fas fa-graduation-cap fs-4"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Авторская методика</h5>
+                            <p class="text-muted mb-0">Подбор индивидуальной программы. Практический подход и любовь к творчеству отличает наших студентов.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Призыв к действию -->
-            <div class="row mt-5">
-                <h2 class="display-6 p-4 bg-warning text-center pb-4">Начните своё музыкальное путешествие уже
-                    сегодня!</h2>
-                <a type="button" href="#signup" class="btn btn-dark float-right">Записаться на пробный
-                    урок</a>
-            </div>
-
-            <h2 class="display-6">Статьи</h2>
-            <div class="card-group">
-                <div class="card">
-                    <img src="./images/articles/artmin1.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Title</h5>
-                        <p class="card-text">Lots of text</p>
-                        <a href="#" class="card-link">Подробнее</a>
-                    </div>
-                    <div class="card-footer">Footer</div>
-                </div>
-
-                <div class="card">
-                    <img src="./images/articles/artmin2.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Title</h5>
-                        <p class="card-text">Lots of text</p>
-                        <a href="#" class="card-link">Подробнее</a>
-                    </div>
-                    <div class="card-footer">Footer</div>
-                </div>
-
-                <div class="card">
-                    <img src="./images/articles/artmin3.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Title</h5>
-                        <p class="card-text">Lots of text</p>
-                        <a href="#" class="card-link">Подробнее</a>
-                    </div>
-                    <div class="card-footer">Footer</div>
-                </div>
-
-                <div class="card">
-                    <img src="./images/articles/artmin4.jpg" alt="" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Title</h5>
-                        <p class="card-text">Lots of text</p>
-                        <a href="#" class="card-link">Подробнее</a>
-                    </div>
-                    <div class="card-footer">Footer</div>
-                </div>
-            </div>
-
         </div>
+    </section>
 
+    <!-- Отзывы -->
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Отзывы наших учеников</h2>
+                <p class="lead text-muted">Что говорят о нас те, кто уже учится</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 testiomonial-card">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Анна" class="rounded-circle me-3" width="60">
+                                <div>
+                                    <h5 class="mb-0">Анна</h5>
+                                    <div class="text-warning mb-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <small class="text-muted">Базовый курс</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"Никогда не думала, что в 35 лет научусь играть на гитаре! Преподаватель нашел подход, объясняет очень понятно. Уже могу играть несколько песен!"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 testiomonial-card">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Дмитрий" class="rounded-circle me-3" width="60">
+                                <div>
+                                    <h5 class="mb-0">Дмитрий</h5>
+                                    <div class="text-warning mb-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <small class="text-muted">Продвинутый курс</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"Занимаюсь 4 месяца, прогресс колоссальный! Теперь могу импровизировать и понимаю теорию. Уроки проходят в удобное время, что важно при моей работе."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 testiomonial-card">
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ольга" class="rounded-circle me-3" width="60">
+                                <div>
+                                    <h5 class="mb-0">Ольга</h5>
+                                    <div class="text-warning mb-1">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <small class="text-muted">Детский курс</small>
+                                </div>
+                            </div>
+                            <p class="card-text">"Мой сын (10 лет) в восторге от занятий! Преподаватель умеет заинтересовать, уроки проходят весело и продуктивно. Уже вижу результат!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </main>
-
-    <footer class="bg-dark text-white py-3">
+    <!-- CTA -->
+    <section id="signup" class="py-5 text-white" style="background-color: var(--primary);">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <small>&copy; 2024 Alice's Guitar School - All rights reserved</small>
-                </div>
-                <div class="col-12 text-center">
-                    <p class="mb-0">
-                        <small>
-                            <a href="https://www.webcrew.com" class="text-white">Created by WebCrew.com</a>
-                        </small>
-                    </p>
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-4">Готовы начать свое музыкальное путешествие?</h2>
+                    <p class="lead mb-5">Запишитесь на бесплатный пробный урок и получите консультацию преподавателя</p>
+                    <form id="contactForm" class="row g-3 justify-content-center" novalidate>
+                        <div class="col-md-5">
+                            <input type="text" 
+                                   name="name" 
+                                   class="form-control form-control-lg" 
+                                   placeholder="Ваше имя" 
+                                   required
+                                   minlength="2">
+                            <div class="invalid-feedback">
+                                Пожалуйста, введите ваше имя
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="tel" 
+                                   name="phone" 
+                                   class="form-control form-control-lg" 
+                                   placeholder="+373" 
+                                   pattern="[\+]373[ ][0-9]{2}[ ][0-9]{3}[ ][0-9]{3}"
+                                   required>
+                            <div class="invalid-feedback">
+                                Введите номер в формате +373 11 111 111
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-warning btn-lg w-150">Записаться</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.3.js"
-        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous">
-        </script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+    </section>
+    
+    <script>
+    // Валидация формы
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        const form = event.target;
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    });
+    
+    // Маска для телефона (международный формат +373)
+    document.querySelector('input[name="phone"]').addEventListener('input', function(e) {
+        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,3})/);
+        e.target.value = !x[1] ? '' : 
+                         x[1] + (x[2] ? ' ' + x[2] : '') + 
+                         (x[3] ? ' ' + x[3] : '') + 
+                         (x[4] ? ' ' + x[4] : '');
+        
+        // Автоматически добавляем + если его нет
+        if (!e.target.value.startsWith('+')) {
+            e.target.value = '+' + e.target.value;
+        }
+    });
+    </script>
